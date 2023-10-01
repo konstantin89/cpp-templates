@@ -7,4 +7,5 @@
 ## Notes
 
 ### Template features by C++ standard
+From `Code for Templates meta programming with C++`:  
 ![](./template_features.png)
