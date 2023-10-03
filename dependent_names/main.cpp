@@ -17,7 +17,7 @@ MyClass(T param): value(param)
 
 void Method()
 {
-     // Non dependent type.
+     // Non dependent type - not dependent on the T typename.
      // Func will be always called for type T.
     Func(value);
 }
@@ -33,8 +33,8 @@ int main()
     // Got value 3.2 of type: d
     // Got value 5 of type: i
 
-    // Binding rules:
-    // For dependent names, it is performed at the point of template INSTANTIATION. 
+    // Binding rules (dependent/non dependent on template type):
+    // For dependent names , it is performed at the point of template INSTANTIATION. 
     // For non-dependent names, it is performed at the point of the template DEFINITION.
 
     MyClass c(3);
