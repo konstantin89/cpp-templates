@@ -1,5 +1,11 @@
 #include <iostream>
 
+template <typename U>
+void PrintValue(const U& value)
+{
+    std::cout << "Value: " << value << std::endl;
+}
+
 template <typename T>
 class MyClass
 {
@@ -14,7 +20,7 @@ private:
 };
 
 int main()
-{
+{   
 /*
     a and b syntax is supported only from C++17.
     In lower C++ versions the following error will be printed:
@@ -37,6 +43,10 @@ int main()
 
     MyClass<int> c(21);
     MyClass<std::string> d("My String!");
+
+    // Function template type deduction is not C++17 dependant.
+    PrintValue(3);
+    PrintValue<int>(45);
 
     return 0;
 }
